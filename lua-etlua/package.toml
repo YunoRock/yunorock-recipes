@@ -1,0 +1,17 @@
+
+name = "lua-etlua"
+version = "1.3.0"
+
+sources = ["https://github.com/leafo/etlua/archive/v%{version}.tar.gz"]
+
+build-dependencies = ["moonscript"]
+
+configure = []
+build = []
+install = ["""
+	for i in 5.1 5.2 5.3; do
+		mkdir -p "%{pkg}%{sharedir}/lua/$i"
+		cp etlua-%{version}/etlua.lua "%{pkg}%{sharedir}/lua/$i/"
+	done
+"""]
+

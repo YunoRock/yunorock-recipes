@@ -1,0 +1,17 @@
+
+name = "lua-serpent"
+version = "0.30"
+
+sources = ["https://github.com/pkulchenko/serpent/archive/%{version}.tar.gz"]
+
+summary = "A fast Lua serialization and deserialization library."
+
+configure = []
+build = []
+install = ["""
+	for i in 5.1 5.2 5.3; do
+		mkdir -p "%{pkg}%{sharedir}/lua/$i"
+		cp serpent-%{version}/src/serpent.lua "%{pkg}%{sharedir}/lua/$i/"
+	done
+"""]
+

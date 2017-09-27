@@ -1,0 +1,21 @@
+
+packager = "Luka Vandervelden <lukc@upyum.com>"
+url      = "https://github.com/jonstoler/lua-toml"
+summary  = "Lua library to read and emit TOML"
+
+name = "lua-toml"
+sources = ["git+https://github.com/jonstoler/lua-toml"]
+
+options = ["no-arch"]
+
+configure = []
+build = []
+install = [
+	"mkdir -p %{pkg}%{sharedir}/lua/5.1",
+	"mkdir -p %{pkg}%{sharedir}/lua/5.2",
+	"mkdir -p %{pkg}%{sharedir}/lua/5.3",
+	"cp lua-toml/toml.lua %{pkg}%{sharedir}/lua/5.1",
+	"ln -s ../5.1/toml.lua %{pkg}%{sharedir}/lua/5.2/toml.lua",
+	"ln -s ../5.1/toml.lua %{pkg}%{sharedir}/lua/5.3/toml.lua"
+]
+

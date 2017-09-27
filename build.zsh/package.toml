@@ -1,0 +1,12 @@
+
+summary  = "Lukc’ experimental Makefiles generator"
+url      = "https://github.com/Lukc/build.zsh"
+packager = "Luka Vandervelden <lukc@upyum.com>"
+
+name = "build.zsh"
+sources = "git+https://github.com/Lukc/build.zsh"
+
+options = ["no-arch"]
+dependencies = ["zsh"]
+build-dependencies = ["make"]
+

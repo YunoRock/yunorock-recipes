@@ -1,0 +1,46 @@
+
+name = "pkgxx"
+sources = ["git+https://github.com/Lukc/pkgxx.moon -> pkgxx"]
+dirname = "pkgxx"
+
+summary = "Modular and extensible packages builder."
+url = "https://github.com/Lukc/pkgxx.moon"
+
+options = ["no-arch"]
+
+# Mostly theoretical list.
+dependencies = [
+	"moonscript",
+	"lua-argparse",
+	"luafilesystem",
+	"lua-toml"
+]
+
+build-dependencies = [
+	"build.zsh"
+]
+
+[os.Debian]
+dependencies = [
+	"moonscript",
+	"lua-argparse",
+	"lua-filesystem",
+	"lua-toml"
+]
+
+[os.Fedora]
+dependencies = [
+	"lua-moonscript",
+	"lua-argparse",
+	"lua-filesystem",
+	"lua-toml"
+]
+
+[os.Alpine]
+dependencies = [
+	"moonscript"
+	"lua-argparse",
+	"lua-filesystem",
+	"lua-toml"
+]
+
