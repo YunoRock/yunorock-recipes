@@ -1,0 +1,14 @@
+
+name = "yunoconfig"
+sources = ["git+https://github.com/Lukc/yunoconfig"]
+
+dependencies = [
+	"moonscript"
+	"lua-serpent"
+	"lua-etlua"
+	"lua-loadkit"
+	"lua-filesystem"
+	"lua-term"
+	"lua-argparse"
+]
+
