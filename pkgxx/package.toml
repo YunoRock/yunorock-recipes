@@ -14,6 +14,7 @@ dependencies = [
 	"lua-argparse",
 	"luafilesystem",
 	"lua-toml"
+	"lua-process"
 ]
 
 build-dependencies = [
@@ -26,6 +27,7 @@ dependencies = [
 	"lua-argparse",
 	"lua-filesystem",
 	"lua-toml"
+	"lua-process"
 ]
 
 [os.Fedora]
@@ -34,6 +36,7 @@ dependencies = [
 	"lua-argparse",
 	"lua-filesystem",
 	"lua-toml"
+	"lua-process"
 ]
 
 [os.Alpine]
@@ -42,5 +45,6 @@ dependencies = [
 	"lua-argparse",
 	"lua-filesystem",
 	"lua-toml"
+	"lua-process"
 ]
 

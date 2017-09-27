@@ -1,0 +1,17 @@
+
+name = "lua-process"
+version = "1.6.1"
+
+sources = ["https://github.com/mah0x211/lua-process/archive/v%{version}.tar.gz"]
+
+build-dependencies = ["luarocks5.1"]
+dependencies = ["lua5.1"]
+
+configure = []
+build = """
+	cd %{name}-%{version}
+	luarocks-5.1 make rockspecs/process-1.6.1-1.rockspec --tree %{pkg}
+	rm -rf '%{pkg}/lib/luarocks/'
+"""
+install = []
+
