@@ -46,5 +46,6 @@ dependencies = [
 	"lua-filesystem",
 	"lua-toml"
 	"lua-process"
+	"html-xml-utils"
 ]
 

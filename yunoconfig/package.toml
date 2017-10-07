@@ -3,6 +3,7 @@ name = "yunoconfig"
 sources = ["git+https://github.com/Lukc/yunoconfig"]
 
 dependencies = [
+	"lua"
 	"moonscript"
 	"lua-serpent"
 	"lua-etlua"
@@ -10,5 +11,19 @@ dependencies = [
 	"lua-filesystem"
 	"lua-term"
 	"lua-argparse"
+
+	"libressl" # Used to generate keys in the default template.
 ]
+
+configure = []
+build = []
+install = """
+	mkdir -p '%{pkg}%{sharedir}/lua/5.1/'
+	mkdir -p '%{pkg}%{sharedir}/yunoconfig'
+	mkdir -p '%{pkg}%{bindir}'
+
+	cp -r yunoconfig/yunoconfig '%{pkg}%{sharedir}/lua/5.1/'
+	cp yunoconfig/yunoconfig.moon '%{pkg}%{bindir}/yunoconfig'
+	cp -r yunoconfig/data/* '%{pkg}%{sharedir}/yunoconfig/'
+"""
 
