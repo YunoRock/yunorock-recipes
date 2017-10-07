@@ -1,6 +1,10 @@
 
+packager = "Luka Vandervelden <lukc@upyum.com>"
+
 name = "yunoconfig"
 sources = ["git+https://github.com/Lukc/yunoconfig"]
+
+options = ["no-arch"]
 
 dependencies = [
 	"moonscript"

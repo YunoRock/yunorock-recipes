@@ -1,10 +1,14 @@
 
+packager = "Luka Vandervelden <lukc@upyum.com>"
+
 name = "lua-serpent"
 version = "0.30"
 
 sources = ["https://github.com/pkulchenko/serpent/archive/%{version}.tar.gz"]
 
 summary = "A fast Lua serialization and deserialization library."
+
+options = ["no-arch"]
 
 configure = []
 build = []

@@ -1,4 +1,6 @@
 
+packager = "Luka Vandervelden <lukc@upyum.com>"
+
 name = "pkgxx"
 sources = ["git+https://github.com/Lukc/pkgxx.moon -> pkgxx"]
 dirname = "pkgxx"
