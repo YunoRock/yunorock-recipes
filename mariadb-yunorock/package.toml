@@ -1,0 +1,20 @@
+
+name = "mariadb-yunorock"
+version = "10.1.26"
+release = 4
+
+sources = ["mariadb.moon", "db-handle.sh", "mariadb_openrc.ept"]
+
+dependencies = ["yunoconfig", "mariadb", "mariadb-client"]
+
+configure = []
+build = []
+install = """
+	mkdir -p '%{pkg}%{sharedir}/yunoconfig/templates'
+	cp mariadb.moon '%{pkg}%{sharedir}/yunoconfig/'
+	cp mariadb_openrc.ept '%{pkg}%{sharedir}/yunoconfig/templates/'
+
+	mkdir -p '%{pkg}/usr/local/bin'
+	cp db-handle.sh '%{pkg}/usr/local/bin/'
+"""
+
