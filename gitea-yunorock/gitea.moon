@@ -5,7 +5,7 @@ service "gitea", {
 	}
 	consumes "mysql", {}
 
-	configure: =>
+	generate: =>
 		domainName = @\getDomainName! or "@"
 		configFile = "/etc/yunorock/#{domainName}/gitea.ini"
 

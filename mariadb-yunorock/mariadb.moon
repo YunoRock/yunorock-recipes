@@ -18,7 +18,7 @@ service "mariadb", {
 	--		need: {"localmount"}
 	--	}
 
-	configure: =>
+	generate: =>
 		unless @cache.rootPassword
 			p = io.popen "cat /dev/urandom | base64 | head -c 40", "r"
 			rootPassword = p\read "*line"
