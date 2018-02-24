@@ -43,11 +43,15 @@ dependencies = [
 
 [os.Alpine]
 dependencies = [
-	"moonscript"
-	"lua-argparse",
-	"lua-filesystem",
-	"lua-toml"
-	"lua-process"
+	"lua5.1-moonscript"
+	"lua5.1-argparse",
+	"lua5.1-filesystem",
+	"lua5.1-toml"
 	"html-xml-utils"
 ]
+install = """
+	cd pkgxx
+	make PREFIX="%{prefix}" BINDIR="%{bindir}" LUA_VERSION="5.1" DESTDIR="%{pkg}" install
+	sed -i -e "1{s|moon|moon-5.1|}" "%{pkg}%{bindir}/pkgxx"
+"""
 
